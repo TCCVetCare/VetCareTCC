@@ -6,6 +6,7 @@ using System.Linq;
 using System.Numerics;
 using System.Web;
 using VetCareTCC.Models;
+using VetCareTCC.ViewlModels;
 
 namespace VetCareTCC.Repositories
 {

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using VetCareTCC.Models;
+using VetCareTCC.ViewlModels;
 using static VetCareTCC.Models.UserModel;
 
 namespace VetCareTCC.Repositories
