@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - VetCare</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Layout Admin</title>
+</head>
+
+<body class="w-screen h-screen m-0 p-0 box-border bg-gray-200 dark:bg-neutral-900 overflow-x-hidden">
+    <header class="w-11/12 h-16 top-0 right-0 fixed z-20">
+        <div class="w-full flex justify-center items-center">
+            <a href="#" class="flex items-center mt-8">
+                <img class="w-auto h-auto" src="../logo-theme-dark.svg" alt="Logo">
+            </a>
+        </div>
+    </header>
+
+    <nav class="w-12 lg:w-16 shadow flex-col md:flex-row bg-purple-950 text-gray-200 bg-blue-300 ">
+        <aside id="default-sidebar" class="w-12 md:w-auto h-screen fixed top-0 left-0 z-40 transition-transform -translate-x-0 sm:translate-x-0" aria-label="Sidebar">
+            <div class="h-full px-3 pt-16 overflow-y-auto bg-purple-950  bg-blue-300">
+                <ul class="space-y-2 font-medium">
+                    <li>
+                        <a href="#" class="flex items-center justify-center md:justify-start p-2   rounded-lg hover:scale-110 transition duration-100">
+                            <i class="material-icons">account_circle</i>
+                            <span class="hidden sm:ml-3 md:block">Area do Admin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center justify-center md:justify-start p-2   rounded-lg hover:scale-110 transition duration-100">
+                            <i class="material-icons">leaderboard</i>
+                            <span class="hidden sm:ml-3 md:block">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center justify-center md:justify-start p-2   rounded-lg hover:scale-110 transition duration-100">
+                            <i class="material-icons">conveyor_belt</i>
+                            <span class="hidden md:block md:flex-1 md:ml-3 md:whitespace-nowrap">Fornecedor</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center justify-center md:justify-start p-2   rounded-lg hover:scale-110 transition duration-100">
+                            <i class="material-icons">pets</i>
+                            <span class="hidden sm:ml-3 md:block md:flex-1 md:ml-3 md:whitespace-nowrap">Planos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center justify-center md:justify-start p-2   rounded-lg hover:scale-110 transition duration-100">
+                            <i class="material-icons">production_quantity_limits</i>
+                            <span class="hidden sm:ml-3 md:block md:flex-1 md:ml-3 md:whitespace-nowrap">Produtos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center justify-center md:justify-start p-2   rounded-lg hover:scale-110 transition duration-100">
+                            <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 8.00004L15 11V21H13V15H6L4 18V21H2V15L3 14V11L0 8.00004L1 7.00004L3 9.00004H5V12C5 12.2653 5.10536 12.5196 5.29289 12.7071C5.48043 12.8947 5.73478 13 6 13H10C10.2652 13 10.5196 12.8947 10.7071 12.7071C10.8946 12.5196 11 12.2653 11 12V9.00004L12 8.00004ZM17 5.00004V3.00004L13 7.00004L16 10L17 9.00004L18 10L20 8.00004L17 5.00004ZM9.5 9.50004L2.5 2.50004C2.23 2.22004 1.79 2.22004 1.5 2.50004C1.22 2.77004 1.22 3.21004 1.5 3.50004L8.5 10.5C8.77 10.78 9.21 10.78 9.5 10.5C9.78 10.23 9.78 9.79004 9.5 9.50004Z" />
+                            </svg>
+                            <span class="hidden sm:ml-3 md:block md:flex-1 md:ml-3 md:whitespace-nowrap">Serviços</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - </p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

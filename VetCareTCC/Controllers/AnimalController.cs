@@ -718,7 +718,7 @@ namespace VetCareTCC.Controllers
 
         }
 
-        [CustomeAuthorize(UserRole.Admin)]
+        //[CustomeAuthorize(UserRole.Admin)]
         public ActionResult ListAnimal()
         {
             return View(getAnimalByIdCustomer2());
