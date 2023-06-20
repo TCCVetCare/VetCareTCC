@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using VetCareTCC.Models;
 using VetCareTCC.Repositories;
+using static VetCareTCC.Repositories.SupplierRepository;
 
 namespace VetCareTCC.Controllers
 {
@@ -31,13 +32,14 @@ namespace VetCareTCC.Controllers
         [AllowAnonymous]
         public ActionResult CadCustomer(CustomerModel customer, HttpPostedFileBase file)
         {
+            if (!ModelState.IsValid)
+                if (!ModelState.IsValid)
+                    return View(customer);
             string arquivo = Path.GetFileName(file.FileName);
             string file2 = "/Files/" + Path.GetFileName(file.FileName);
             string _path = Path.Combine(Server.MapPath("/Files"), arquivo);
             file.SaveAs(_path);
             customer.imageCustomer = file2;
-            if (ModelState.IsValid)
-                return View(customer);
 
             string cpf = queryCustomer.SelectCPFCustomer(customer.cpfCustomer);
             string email = queryCustomer.SelectEmailCustomer(customer.emailCustomer);
