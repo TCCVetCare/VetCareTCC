@@ -227,11 +227,11 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Animal\ListAnimal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Assets\" />
-    <Folder Include="Views\Animal\" />
     <Folder Include="Views\Cart\" />
     <Folder Include="Views\Customer\" />
     <Folder Include="Views\Plan\" />
