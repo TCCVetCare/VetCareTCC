@@ -23,8 +23,6 @@ namespace VetCareTCC.Repositories
                 {
                     connection.Open();
 
-
-
                     //verifica se o usuÃ¡rio Ã© um administrador
                     using (var command = new MySqlCommand("SELECT * FROM tbAdmin WHERE emailAdmin = @EmailAdmin AND passwordAdmin = @PasswordAdmin", connection))
                     {
