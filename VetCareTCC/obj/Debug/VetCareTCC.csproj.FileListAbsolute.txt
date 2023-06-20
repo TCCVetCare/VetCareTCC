@@ -84,3 +84,7 @@ D:\Downloads\Versoes ProjetoTCC\VetCareTCC\VetCareTCC\obj\Debug\VetCareTCC.cspro
 D:\Downloads\Versoes ProjetoTCC\VetCareTCC\VetCareTCC\obj\Debug\VetCareTCC.csproj.CopyComplete
 D:\Downloads\Versoes ProjetoTCC\VetCareTCC\VetCareTCC\obj\Debug\VetCareTCC.dll
 D:\Downloads\Versoes ProjetoTCC\VetCareTCC\VetCareTCC\obj\Debug\VetCareTCC.pdb
+C:\Users\3adsmod\Desktop\tccVetCare\VetCareTCC\VetCareTCC\obj\Debug\VetCareTCC.csproj.AssemblyReference.cache
+C:\Users\3adsmod\Desktop\tccVetCare\VetCareTCC\VetCareTCC\obj\Debug\VetCareTCC.csproj.CoreCompileInputs.cache
+C:\Users\3adsmod\Desktop\tccVetCare\VetCareTCC\VetCareTCC\obj\Debug\VetCareTCC.dll
+C:\Users\3adsmod\Desktop\tccVetCare\VetCareTCC\VetCareTCC\obj\Debug\VetCareTCC.pdb
