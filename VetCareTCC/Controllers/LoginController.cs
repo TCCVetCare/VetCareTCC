@@ -12,11 +12,6 @@ namespace VetCareTCC.Controllers
 {
     public class LoginController : Controller
     {
-        // GET: Login
-        public ActionResult Index()
-        {
-            return View();
-        }
 
         private readonly UserRepository queryUser;
 
@@ -63,13 +58,6 @@ namespace VetCareTCC.Controllers
             return View(model);
         }
 
-
-
-        //public ActionResult Logout()
-        //{
-        //    FormsAuthentication.SignOut();
-        //    return RedirectToAction("Login", "Login");
-        //}
 
         public ActionResult Logout()
         {
