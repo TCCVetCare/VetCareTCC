@@ -38,19 +38,19 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center justify-center md:justify-start p-2   rounded-lg hover:scale-110 transition duration-100">
+                        <a href="@Url.Action("ListSupplier", "Supplier")" class="flex items-center justify-center md:justify-start p-2   rounded-lg hover:scale-110 transition duration-100">
                             <i class="material-icons">conveyor_belt</i>
                             <span class="hidden md:block md:flex-1 md:ml-3 md:whitespace-nowrap">Fornecedor</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center justify-center md:justify-start p-2   rounded-lg hover:scale-110 transition duration-100">
+                        <a href="@Url.Action("ListPlan", "Plan")" class="flex items-center justify-center md:justify-start p-2   rounded-lg hover:scale-110 transition duration-100">
                             <i class="material-icons">pets</i>
                             <span class="hidden sm:ml-3 md:block md:flex-1 md:ml-3 md:whitespace-nowrap">Planos</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center justify-center md:justify-start p-2   rounded-lg hover:scale-110 transition duration-100">
+                        <a href="@Url.Action("ListProduct", "Product")" class="flex items-center justify-center md:justify-start p-2   rounded-lg hover:scale-110 transition duration-100">
                             <i class="material-icons">production_quantity_limits</i>
                             <span class="hidden sm:ml-3 md:block md:flex-1 md:ml-3 md:whitespace-nowrap">Produtos</span>
                         </a>
@@ -67,13 +67,8 @@
             </div>
         </aside>
     </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - </p>
-        </footer>
-    </div>
+
+    @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)

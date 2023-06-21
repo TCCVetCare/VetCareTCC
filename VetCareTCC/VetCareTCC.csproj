@@ -204,6 +204,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Images\Paleta TCC.png" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -229,17 +230,23 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Animal\ListAnimal.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Supplier\CadSupplier.cshtml" />
+    <Content Include="Views\Supplier\ListSupplier.cshtml" />
+    <Content Include="Views\Supplier\UpdateSupplier.cshtml" />
+    <Content Include="Views\Plan\ListPlan.cshtml" />
+    <Content Include="Views\Plan\UpdatePlan.cshtml" />
+    <Content Include="Views\Plan\CadPlan.cshtml" />
+    <Content Include="Views\Product\CadProduct.cshtml" />
+    <Content Include="Views\Product\ListProduct.cshtml" />
+    <Content Include="Views\Product\UpdateProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Assets\" />
     <Folder Include="Views\Cart\" />
     <Folder Include="Views\Customer\" />
-    <Folder Include="Views\Plan\" />
-    <Folder Include="Views\Product\" />
     <Folder Include="Views\Schedule\" />
     <Folder Include="Views\Service\" />
-    <Folder Include="Views\Supplier\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

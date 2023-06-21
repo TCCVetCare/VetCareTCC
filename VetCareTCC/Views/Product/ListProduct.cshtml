@@ -2,32 +2,33 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 @{
-    ViewBag.Title = "ListAnimal";
+    ViewBag.Title = "Listar Produto";
 }
 
-@model IEnumerable<VetCareTCC.Models.AnimalModel>
+@model IEnumerable<VetCareTCC.Models.ProductModel>
 
 <main class="flex flex-col mt-20 pl-12 justify-center">
-    
+    <div class="pt-12 pr-4 md:pr-52 lg:pr-24 xl:pr-28 flex flex-row-reverse text-sm font-medium">
+        <a class="w-10 h-10 inline-flex items-center justify-center border-none rounded-full bg-yellow-400 text-neutral-900" href="@Url.Action("CadProduct", "Product")">
+            <i class="material-icons">add</i>
+        </a>
+    </div>
     <div class="p-3">
         <div class="overflow-x-auto rounded">
             <table class="table-auto w-full">
                 <thead class="text-xs font-semibold uppercase bg-purple-950 dark:bg-blue-300 text-gray-200 dark:text-neutral-900 border-b border-yellow-400 ">
                     <tr>
                         <th class="p-2 whitespace-nowrap">
-                            <div class="font-semibold text-center">@Html.DisplayNameFor(model => model.idAnimal)</div>
+                            <div class="font-semibold text-center">@Html.DisplayNameFor(model => model.idProduct)</div>
                         </th>
                         <th class="p-2 whitespace-nowrap">
-                            <div class="font-semibold text-center">@Html.DisplayNameFor(model => model.nameAnimal)</div>
+                            <div class="font-semibold text-center">@Html.DisplayNameFor(model => model.nameProduct)</div>
                         </th>
                         <th class="p-2 whitespace-nowrap">
-                            <div class="font-semibold text-center">@Html.DisplayNameFor(model => model.ageAnimal)</div>
+                            <div class="font-semibold text-center">@Html.DisplayNameFor(model => model.unitPrice)</div>
                         </th>
                         <th class="p-2 whitespace-nowrap">
-                            <div class="font-semibold text-center">@Html.DisplayNameFor(model => model.idSpeciesAnimal)</div>
-                        </th>
-                        <th class="p-2 whitespace-nowrap">
-                            <div class="font-semibold text-center">@Html.DisplayNameFor(model => model.idGenderAnimal)</div>
+                            <div class="font-semibold text-center">@Html.DisplayNameFor(model => model.descriptionProduct)</div>
                         </th>
                         <th class="p-2 whitespace-nowrap">
                             <div class="font-semibold text-center">Editar e Excluir</div>
@@ -41,29 +42,23 @@
 
                             <td class="p-2 whitespace-nowrap bg-zinc-300 dark:bg-neutral-700">
                                 <div class="flex items-center justify-center">
-                                    <div class="font-medium text-gray-800">@Html.DisplayFor(modelItem => item.idAnimal)</div>
+                                    <div class="font-medium text-gray-800">@Html.DisplayFor(modelItem => item.idProduct)</div>
                                 </div>
                             </td>
                             <td class="p-2 whitespace-nowrap bg-zinc-300 dark:bg-neutral-700">
-                                <div class="text-center">@Html.DisplayFor(modelItem => item.nameAnimal)</div>
+                                <div class="text-center">@Html.DisplayFor(modelItem => item.nameProduct)</div>
                             </td>
                             <td class="p-2 whitespace-nowrap bg-zinc-300 dark:bg-neutral-700">
-                                <div class=" text-center">@Html.DisplayFor(modelItem => item.ageAnimal)</div>
+                                <div class=" text-center">@Html.DisplayFor(modelItem => item.unitPrice)</div>
                             </td>
                             <td class="p-2 whitespace-nowrap bg-zinc-300 dark:bg-neutral-700">
-                                <div class="text-center font-medium text-green-500">@ViewBag.NameSpeciesAnimal</div>
-                            </td>
-                            <td class="p-2 whitespace-nowrap bg-zinc-300 dark:bg-neutral-700">
-                                <div class="text-center font-medium text-green-500">@ViewBag.NameBreed</div>
-                            </td>
-                            <td class="p-2 whitespace-nowrap bg-zinc-300 dark:bg-neutral-700">
-                                <div class="text-center font-medium text-green-500">@ViewBag.Gender</div>
+                                <div class=" text-center">@Html.DisplayFor(modelItem => item.descriptionProduct)</div>
                             </td>
                             <td class="p-2 whitespace-nowrap bg-zinc-300 dark:bg-neutral-700">
                                 <div class="text-center text-purple-950">
-                                    <a class="hover:underline" href="@Url.Action("UpdateAnimal", "Animal")">Editar</a>
+                                    <a class="hover:underline" href="@Url.Action("UpdateProduct", "Product", new {id = item.idProduct})">Editar</a>
                                     <span class="">|</span>
-                                    <a class="hover:underline" href="@Url.Action("DeleteAnimal", "Animal")">Excluir</a>
+                                    <a class="hover:underline" href="@Url.Action("DeleteProduct", "Product", new {id = item.idProduct})">Excluir</a>
                                 </div>
                             </td>
                         </tr>

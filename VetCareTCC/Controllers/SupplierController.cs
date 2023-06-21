@@ -19,7 +19,7 @@ namespace VetCareTCC.Controllers
             return View();
         }
 
-        [CustomeAuthorize(UserRole.Admin)]
+        //[CustomeAuthorize(UserRole.Admin)]
         public ActionResult CadSupplier()
         {
             return View();
@@ -45,20 +45,20 @@ namespace VetCareTCC.Controllers
             }
         }
 
-        [CustomeAuthorize(UserRole.Admin)]
+        //[CustomeAuthorize(UserRole.Admin)]
         public ActionResult ListSupplier()
         {
             return View(acSupplier.getSupplier());
         }
 
-        [CustomeAuthorize(UserRole.Admin)]
+        //[CustomeAuthorize(UserRole.Admin)]
         public ActionResult DeleteSupplier(int id)
         {
             acSupplier.deleteSupplier(id);
             return RedirectToAction("ListSupplier");
         }
 
-        [CustomeAuthorize(UserRole.Admin)]
+        //[CustomeAuthorize(UserRole.Admin)]
         public ActionResult UpdateSupplier(string id)
         {
             return View(acSupplier.getSupplier().Find(model => model.idSupplier == id));

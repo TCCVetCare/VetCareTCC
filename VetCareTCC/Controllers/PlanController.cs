@@ -85,7 +85,7 @@ namespace VetCareTCC.Controllers
             return View();
         }
 
-        [CustomeAuthorize(UserRole.Admin)]
+        //[CustomeAuthorize(UserRole.Admin)]
         public ActionResult CadPlan()
         {
             return View();
@@ -95,8 +95,8 @@ namespace VetCareTCC.Controllers
         public ActionResult CadPlan(PlanModel plan, HttpPostedFileBase file)
         {
             string arquivo = Path.GetFileName(file.FileName);
-            string file2 = "/Files/" + Path.GetFileName(file.FileName);
-            string _path = Path.Combine(Server.MapPath("/Files"), arquivo);
+            string file2 = "/Images/" + Path.GetFileName(file.FileName);
+            string _path = Path.Combine(Server.MapPath("/Images"), arquivo);
             file.SaveAs(_path);
             plan.imagePlan = file2;
             if (!ModelState.IsValid)
@@ -125,14 +125,14 @@ namespace VetCareTCC.Controllers
         }
 
 
-        [CustomeAuthorize(UserRole.Admin)]
+        //[CustomeAuthorize(UserRole.Admin)]
         public ActionResult DeletePlan(int id)
         {
             queryRepository.deletePlan(id);
             return RedirectToAction("ListPlan");
         }
 
-        [CustomeAuthorize(UserRole.Admin)]
+        //[CustomeAuthorize(UserRole.Admin)]
         public ActionResult UpdatePlan(string id)
         {
             if (id == null)
@@ -146,8 +146,8 @@ namespace VetCareTCC.Controllers
         public ActionResult UpdatePlan(int id, PlanModel plan, HttpPostedFileBase file)
         {
             string arquivo = Path.GetFileName(file.FileName);
-            string file2 = "/Files/" + Path.GetFileName(file.FileName);
-            string _path = Path.Combine(Server.MapPath("/Files"), arquivo);
+            string file2 = "/Images/" + Path.GetFileName(file.FileName);
+            string _path = Path.Combine(Server.MapPath("/Images"), arquivo);
             file.SaveAs(_path);
             plan.imagePlan = file2;
             if (ModelState.IsValid)

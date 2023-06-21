@@ -57,7 +57,7 @@ namespace VetCareTCC.Controllers
             ViewBag.supplier = new SelectList(supplier, "Value", "Text");
         }
 
-        [CustomeAuthorize(UserRole.Admin)]
+        //[CustomeAuthorize(UserRole.Admin)]
         public ActionResult CadProduct()
         {
             loadSupplier();
@@ -69,8 +69,8 @@ namespace VetCareTCC.Controllers
         {
             loadSupplier();
             string arquivo = Path.GetFileName(file.FileName);
-            string file2 = "/Files/" + Path.GetFileName(file.FileName);
-            string _path = Path.Combine(Server.MapPath("/Files"), arquivo);
+            string file2 = "/Images/" + Path.GetFileName(file.FileName);
+            string _path = Path.Combine(Server.MapPath("/Images"), arquivo);
             file.SaveAs(_path);
             product.imageProduct = file2;
             product.idSupplier = Request["supplier"];
@@ -84,7 +84,7 @@ namespace VetCareTCC.Controllers
             {
                 queryProduct.insertProduct(product);
                 ViewBag.msg = "Cadastro efetuado com sucesso";
-                return RedirectToAction("ListProductAdmin", "Product");
+                return RedirectToAction("ListProduct", "Product");
             }
         }
 
@@ -116,7 +116,7 @@ namespace VetCareTCC.Controllers
         public ActionResult DeleteProduct(int id)
         {
             queryProduct.deleteProduct(id);
-            return RedirectToAction("ListProductAdmin");
+            return RedirectToAction("ListProduct");
         }
 
         public ActionResult UpdateProduct(string id)
@@ -129,8 +129,8 @@ namespace VetCareTCC.Controllers
         public ActionResult UpdateProduct(int id, ProductModel product, HttpPostedFileBase file)
         {
             string arquivo = Path.GetFileName(file.FileName);
-            string file2 = "/Files/" + Path.GetFileName(file.FileName);
-            string _path = Path.Combine(Server.MapPath("/Files"), arquivo);
+            string file2 = "/Images/" + Path.GetFileName(file.FileName);
+            string _path = Path.Combine(Server.MapPath("/Images"), arquivo);
             file.SaveAs(_path);
             product.imageProduct = file2;
             product.idSupplier = Request["supplier"];
@@ -138,7 +138,7 @@ namespace VetCareTCC.Controllers
             product.idProduct = id.ToString();
             queryProduct.updateProduct(product);
 
-            return RedirectToAction("ListProductAdmin");
+            return RedirectToAction("ListProduct");
         }
 
         public ActionResult Search(string searchTerm)
@@ -235,7 +235,7 @@ namespace VetCareTCC.Controllers
             return sales;
         }
 
-        [CustomeAuthorize(UserRole.Admin)]
+        //[CustomeAuthorize(UserRole.Admin)]
         public ActionResult Sales()
         {
             return View(GetSale());

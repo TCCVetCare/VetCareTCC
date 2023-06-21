@@ -1,0 +1,118 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "Atualizar Plano";
+}
+
+
+@model VetCareTCC.Models.PlanModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>@ViewBag.Title</title>
+</head>
+<body class="bg-neutral-900">
+    <main>
+        <section class="container h-auto m-auto py-8 px-4 gap-8 flex justify-center items-center flex-col">
+
+
+
+            <div class="w-full max-w-md px-4 flex flex-col justify-center items-center text-yellow-400 gap-4">
+                <h1 class="text-4xl font-semibold tracking-tighter">Informe os dados para atualizar o plano na VetCare</h1>
+                <img src="" alt="">
+            </div>
+
+
+
+            @using (Html.BeginForm("UpdatePlan", "Plan", FormMethod.Post, new { enctype = "multipart/form-data", @class = "w-full max-w-xl mt-10 mb-24 py-10 px-4 bg-neutral-700 text-gray-200 rounded-xl" }))
+            {
+                <fieldset class="w-auto max-w-lg mx-auto flex flex-col justify-center items-center">
+                    <div class="w-full flex flex-col justify-center items-center gap-2 text-left">
+                        <legend class="pb-4 uppercase">Dados pessoais</legend>
+
+
+
+                        @Html.AntiForgeryToken()
+
+
+
+                        <label for="customer-name" class="w-auto max-w-xs pt-2 relative text-sm text-neutral-900">
+                            @Html.TextBoxFor(m => m.namePlan, new { @id = "customer-name", @class = "w-60 md:w-72 h-10 pl-8 bg-zinc-300 rounded-lg border-none outline-none placeholder:text-neutral-900", placeholder = "Nome do plano" })
+                            <span class="absolute top-0 left-0 translate-y-4 translate-x-1 text-neutral-900">
+                                <i class="material-icons">person</i>
+                            </span>
+                            <span class="block py-1 text-red-500">
+                                @Html.ValidationMessageFor(m => m.namePlan)
+                            </span>
+                        </label>
+
+
+
+                        <label for="customer-cpf" class="w-auto max-w-xs pt-2 relative text-sm text-neutral-900">
+                            @Html.TextBoxFor(m => m.descriptionPlan, new { @id = "customer-cpf", @class = "w-60 md:w-72 h-10 pl-8 bg-zinc-300 rounded-lg border-none outline-none placeholder:text-neutral-900", placeholder = "Descrição" })
+                            <span class="absolute top-0 left-0 translate-y-4 translate-x-1 text-neutral-900">
+                                <i class="material-icons">badge</i>
+                            </span>
+                            <span class="block py-1 text-red-500">
+                                @Html.ValidationMessageFor(m => m.descriptionPlan)
+                            </span>
+                        </label>
+
+                        <label for="customer-cpf" class="w-auto max-w-xs pt-2 relative text-sm text-neutral-900">
+                            @Html.TextBoxFor(m => m.pricePlan, new { @id = "customer-cpf", @class = "w-60 md:w-72 h-10 pl-8 bg-zinc-300 rounded-lg border-none outline-none placeholder:text-neutral-900", placeholder = "Preço" })
+                            <span class="absolute top-0 left-0 translate-y-4 translate-x-1 text-neutral-900">
+                                <i class="material-icons">badge</i>
+                            </span>
+                            <span class="block py-1 text-red-500">
+                                @Html.ValidationMessageFor(m => m.pricePlan)
+                            </span>
+                        </label>
+
+                        <div class="form-group center">
+                            <div>
+                                <label class="control-label col-md-2" for="file">Foto</label>
+                            </div>
+                            <div class="col-md-10">
+                                <input type="file" name="file" id="file" /> <br />
+                            </div>
+                        </div>
+
+                        <div class="w-full h-auto pt-10 flex flex-col gap-4 justify-center items-center">
+
+
+
+                            <button type="submit" href="" class="w-60 md:w-72 h-12 py-3 px-6 bg-yellow-400 text-neutral-900 font-bold rounded-lg sm:w-32">
+                                Atualizar
+                            </button>
+
+
+
+                            <button type="button" href="" class="w-60 md:w-72 h-12 py-3 px-6 bg-gray-200 text-neutral-900 font-bold rounded-lg sm:w-32">
+                                Voltar
+                            </button>
+
+
+
+                            <span class="py-6 text-center text-yellow-400 font-semibold text-sm">
+                                @Html.ActionLink("Já possui conta? Entrar", "Login", "Login")
+                            </span>
+
+
+
+                        </div>
+                    </div>
+                </fieldset>
+            }
+            @ViewBag.msg
+        </section>
+    </main>
+
+
+
+</body>
+</html>
